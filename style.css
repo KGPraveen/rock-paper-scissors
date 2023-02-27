@@ -1,0 +1,238 @@
+@font-face {
+    font-family: "Acquire";
+    src: url(./fonts/Aquire-BW0ox.otf);
+    font-style: normal;
+    font-weight: 100;
+}
+
+.backgroundvideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.musictoggler {
+    padding: 10px;
+    font-family: "Acquire";
+    color: white;
+    position: fixed;
+    margin-top: 15px;
+    margin-left: 15px;
+    border-radius: 0;
+    background-color: black;
+    border: 2px solid white;
+}
+
+.musictoggler:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(61, 0, 173);
+}
+
+.content {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1700px;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 35px;
+    color: white;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#rocktext, #papertext {
+    font-size: 50px;
+    font-family: "Acquire";
+}
+
+.welcome {
+    font-family: "Acquire";
+}
+
+#neon {
+    font-family: "Acquire";
+}
+
+#scissorstext {
+    font-family: "Acquire";
+}
+
+#neon {
+    margin: auto;
+    font-size: 30px;
+    color: rgb(43, 255, 0);
+}
+
+#rocktext {
+    color: rgb(217, 255, 0);
+}
+
+#papertext {
+    color: rgb(255, 0, 212);
+}
+
+#scissorstext {
+    color: rgb(174, 0, 255);
+    font-size: 70px;
+    margin: auto;
+}
+
+.welcome {
+    color: rgb(5, 148, 112);
+}
+
+.buttonsContainer {
+    max-width: 1920px;
+    margin: auto;
+    margin-bottom: 100px;
+    display: flex;
+    gap: 50px;
+    overflow: none;
+    justify-content: center;
+}
+
+.icon {
+    padding: 0%;
+    background: none;
+    border: 5px solid white;
+    border-radius: 10%;
+    width: 200px;
+    transition: all .4s ease;
+}
+
+.bottom {
+    min-height: 210px;
+    margin: auto;
+    display: flex;
+    color: azure;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Acquire";
+    background-color: rgba(0, 0, 0, 0.527);
+    border: 5px solid white;
+    border-radius: 30px;
+}
+
+.playerScoreContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.computerScoreContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.playerscore, .computerscore {
+    margin-top: 0;
+}
+
+p {
+    font-size: 30px;
+}
+
+
+/* TRANSFORMATION */
+
+.rockIconClicked {
+    transform: scale(1.2);
+    border: 5px solid rgb(0, 132, 255);
+}
+
+.paperIconClicked {
+    transform: scale(1.2);
+    border: 5px solid rgb(255, 0, 0);
+    ;
+}
+
+.scissorsIconClicked {
+    transform: scale(1.2);
+    border: 5px solid rgb(0, 255, 21);
+    ;
+}
+
+#rock:hover {
+    border: 5px solid rgb(0, 132, 255);
+}
+
+#paper:hover {
+    border: 5px solid rgb(255, 0, 0);
+}
+
+#scissors:hover {
+    border: 5px solid rgb(0, 255, 21);
+}
+
+.iconRaised {
+    transform: scale(1.0);
+    border: 5px solid rgb(255, 255, 255);
+    ;
+}
+
+
+
+/* GAME STATUS MESSAGE */
+
+.bottom div {
+    flex: 1 1 0px;
+}
+
+.gamestatus {
+    width: 1000px;
+    text-align: center;
+}
+
+.roundlost {
+    color: rgb(255, 0, 0);
+}
+
+.roundwon {
+    color: rgb(0, 255, 34);
+}
+
+.roundtie {
+    color: rgb(116, 116, 116);
+}
+
+.gamewon {
+    font-size: 50px;
+    color: rgb(255, 187, 0);
+}
+
+.gamewonspan {
+    font-size: 25px;
+    color: white;
+}
+
+.gamelost {
+    font-size: 50px;
+    color: rgb(98, 0, 143);
+}
+
+.gamelostspan {
+    font-size: 25px;
+    color: white;
+}

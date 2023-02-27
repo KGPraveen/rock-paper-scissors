@@ -1,12 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
+
+    <video autoplay loop muted class="backgroundvideo">
+        <source src="./videos/retrowave.mp4" type="video/mp4">
+        There seems to be an error, a retrowave video is supposed to play in the background...
+    </video>
+
+    <audio control autoplay loop class="music" src="./music/main.mp3"></audio>
+    <button class="musictoggler" onclick="togglemusic()">Music</button>
+
+    <div class="content">
+
+        <audio class="clickaudio" src="./sounds/click.mp3"></audio>
+        <!-- <audio data-key="rock" src="./sounds/rock.mp3"></audio>
+        <audio data-key="paper" src="./sounds/paper.mp3"></audio>
+        <audio data-key="scissors" src="./sounds/scissors.mp3"></audio> -->
+        
+        <div class="introduction">
+            <div class="welcome">Welcome To...</div>
+            <div class="title">
+                <p id="neon">NEON, </p>
+                <div class="rockPaper">
+                    <span id="rocktext">ROCK, </span>
+                    <span id="papertext">PAPER...</span>
+                </div>
+                <p id="scissorstext">SCISSOOOORS!!! </p>
+            </div>
+        </div>
+        <div class="buttonsContainer">
+            <img class="icon" id="rock" src="./images/rock.jpg" alt="rock" onclick="clicked('rock')">
+            <img class="icon" id="paper" src="./images/paper.jpg" alt="paper" onclick="clicked('paper')">
+            <img class="icon" id="scissors" src="./images/scissors.jpg" alt="scissors" onclick="clicked('scissors')">
+        </div>
+        <div class="bottom">
+            <div class="playerScoreContainer">
+                <p>PLAYER:</p>
+                <p class="playerscore">0</p>
+            </div>
+            <p class="gamestatus">Click Any Icons to Begin!</p>
+            <div class="computerScoreContainer">
+                <p style="margin-right: 50px;">COMPUTER:</p>
+                <p style="margin-right: 50px;" class="computerscore">0</p>
+            </div>
+        </div>
+    </div>
+
     <script src="./scripts.js"></script>
+
 </body>
+
 </html>
