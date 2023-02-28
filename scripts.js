@@ -105,10 +105,55 @@ function game(userChoice) {
     }
 
     if (userScore.innerHTML == 5) {
-        gamestatus.innerHTML = "CONGRATULATIONS!<br>YOU WON THE GAME!<br><span class='gamewonspan'>Refresh Page to Restart Game</span>";
+        gamestatus.innerHTML = "CONGRATULATIONS!<br>YOU WON THE GAME!<br><span class='gamewonspan'>Hit Restart button (or 'R') to Restart Game.</span>";
         gamestatus.classList.add("gamewon");
     } else if (computerScore.innerHTML == 5) {
-        gamestatus.innerHTML = "Sorry, but you lost the Game...<br><span class='gamelostspan'>Refresh Page to Restart Game</span>";
+        gamestatus.innerHTML = "Sorry, but you lost the Game...<br><span class='gamelostspan'>Hit Restart button (or 'R') to Restart Game.</span>";
         gamestatus.classList.add("gamelost");
     }
+}
+
+function restartgame() {
+    let gamestatus = document.querySelector(".gamestatus");
+
+    gamestatus.classList.remove("gamelost");
+    gamestatus.classList.remove("gamewon");
+    gamestatus.innerHTML = "Click Any Icons to Begin!";
+
+    userScore.innerHTML = parseInt(0);
+    computerScore.innerHTML = parseInt(0);
+
+
+}
+
+window.addEventListener("keydown", keypressed);
+window.addEventListener("keyup", keyreleased);
+
+function keypressed(e) {
+    let restartbutton = document.querySelector(".restartbutton");
+    let musicbutton = document.querySelector(".musictoggler");
+
+    if (e.keyCode == 82) {
+        restartgame();
+        restartbutton.classList.add("restartbuttononr");
+        
+    } else if (e.keyCode == 77) {
+        togglemusic();
+        musicbutton.classList.add("musictoggleronm");
+    }
+}
+
+function keyreleased(e) {
+    let restartbutton = document.querySelector(".restartbutton");
+    let musicbutton = document.querySelector(".musictoggler");
+    let keysinfo = document.querySelector(".keysinfo");
+
+    if (e.keyCode == 82) {
+        restartbutton.classList.remove("restartbuttononr");
+        keysinfo.classList.add("hidekeysinfo");
+    } else if (e.keyCode == 77) {
+        musicbutton.classList.remove("musictoggleronm");
+        keysinfo.classList.add("hidekeysinfo");
+    }
+    
 }
