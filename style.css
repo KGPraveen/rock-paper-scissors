@@ -74,11 +74,13 @@ body {
 
 
 .content {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 1700px;
+    transform: scale(0.8);
+    position: absolute; 
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
 
 .introduction {
